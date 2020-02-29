@@ -9,7 +9,7 @@
         <link rel="stylesheet" href="web1920Cadastro.css">
     </head>
 
-    <body><form action="enviar.php" method="post">
+    <body>
         <div data-layer="c29ea42a-d886-4086-a597-e008cc1158b0" class="web1920Cadastro justify-content-center">
             <img src="assets/web1920Cadastro.png" class=" img-fluid"><div data-layer="2d856e97-239d-461b-b200-d47678f5e26d">
                 <input class="digiteONomeCompleto" type="text" placeholder="Digite o nome completo" id="nome" name="nome" 
@@ -17,8 +17,8 @@
             </div>
             <div data-layer="5ccac4d4-8227-4ad8-a0f8-ee42d766c258" class="informeSeusDadosPessoais">Informe seus dados pessoais</div>
             <div data-layer="19c9894a-180e-4085-aac6-b9ab05bf4ffa">
-                <input class="cpfPass" type="text" placeholder="XXXXXXXXXXX" name="cpf" pattern="[0-9]+$" maxlength="11" 
-                minlength="11" id="cpf" required></div>
+                <input class="cpfPass" type="text" placeholder="XXXXXXXXXXX" name="cpfPass" pattern="[0-9]+$" maxlength="11" 
+                minlength="11" id="cpfPass" required></div>
             <div data-layer="b5044ed5-f47e-449e-9e13-a46599a8e143" class="cpfPassaporte">CPF/ Passaporte</div>
             <div data-layer="f35fa999-1199-4b07-b610-21122c788def" class="nome">Nome</div>
             <div data-layer="0f7c113d-156d-438c-ade1-9b4f76ab0c68" class="cadastroDoLocatario">Cadastro do Locatário</div>
@@ -29,7 +29,7 @@
             <div data-layer="45cfb261-b8da-41f8-8e9e-782e451678f3" class="eMail">E-mail</div>
             <div data-layer="47599780-b99f-4383-bce7-726889d20d58">
                 <input class="telCel" type="tel" required="required" maxlength="15" minlength="15" placeholder="(DDD)XXXXX-XXXX" 
-                name="telefone" id="telefone" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$"></div>
+                name="phone" id="phone" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$"></div>
             <div data-layer="6dca1c1f-8417-4b55-a57b-24cde8a222a0" class="telefoneOuCelular">Telefone ou Celular</div>
             <div data-layer="a96e9847-d710-4f28-a3ac-3b86bfa19336" class="categoriaHabilitada">Categoria Habilitada</div>
             <div data-layer="2575537d-6de3-4bea-b91e-b7632559ed9f" class="informeSeusDadosDaCarteiraNacionalDeHabilitacao">Informe seus dados da Carteira Nacional de Habilitação</div>
@@ -37,8 +37,8 @@
             <div data-layer="be24c8c4-f1da-4fdd-b7a8-cc0f20267cdf" class="locarLogoTransparente"></div>
             <div data-layer="b3133449-dda6-4e11-b683-a5c2266f8253" class="numeroDeRegistroDaCnh">Número de Registro da CNH</div>
             <div data-layer="231b1180-8001-4c2f-bd3e-4ca369ee2bb3">
-                <input class="numCNH" type="text" placeholder="XXXXXXXXXXX" name="cnh" pattern="[0-9]+$" maxlength="11" 
-                minlength="11" id="cnh" required></div>
+                <input class="numCNH" type="number" placeholder="XXXXXXXXXXX" name="numCNH" pattern="[0-9]+$" maxlength="11" 
+                minlength="11" id="numCNH" required></div>
             <div data-layer="40442816-d3da-47ef-812d-3e50d6784a8c">
                 <select class="selecioneALetraDaCategoria" class="custom-select" placeholder="Selecione a letra da categoria" required>
                     <option value="B">B</option>
@@ -50,7 +50,7 @@
                 pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2012-01-01" max="2050-02-18" id="validade"></div>
             <div data-layer="bf12c08a-53e7-4882-91bf-6f2220b7c988" class="informeSeuEndereco">Informe seu endereço</div>
             <div data-layer="38f644ef-7e4d-4b8e-84a8-60ee1dd9b19b">
-                <input class="cepDado" type="text" placeholder="XXXXXXXX" name="cep" pattern="[0-9]+$" maxlength="8" 
+                <input class="cepDado" class="cpfPass" type="number" placeholder="XXXXXXXX" name="cep" pattern="[0-9]+$" maxlength="8" 
                 minlength="8" id="cep" required></div>
             <div data-layer="e7fdbf01-a60f-4b48-9d2c-0c26a8a1362c" class="cep">CEP</div>
             <div data-layer="b175c7de-29df-44a5-a2ec-038c8cb3f744">
@@ -58,8 +58,8 @@
                 pattern="[a-zA-Záãâéêíîóôõú\s]+$" maxlength="50" id="rua"></div>
             <div data-layer="5179ec2b-d285-4da4-82da-78924a483530" class="rua">Rua</div>
             <div data-layer="afb21f02-386c-41ff-bb32-670ae86e154d">
-                <input class="numEnd" type="text" required="required" maxlength="5" minlength="1" placeholder="XXXXX" name="numero" 
-                pattern="[0-9]+$" id="numero"></div>
+                <input class="numEnd" type="number" required="required" maxlength="5" minlength="1" placeholder="XXXXX" name="num" 
+                pattern="[0-9]+$" id="num"></div>
             <div data-layer="d9d0bc16-bd29-49da-8841-06cfea3a40a6" class="numero">Número</div>
             <div data-layer="fc5d65e1-fd0c-4dcd-a50b-b2033e5fd3d2" >
                 <input class="digiteONomeDoBairro" type="text" required="required" placeholder="Digite o nome do bairro" name="bairro" 
@@ -81,14 +81,10 @@
             <div data-layer="62898099-3600-4d83-8d2e-234c34b5eced">
                 <input class="digiteONomeDoPais" type="text" placeholder="Digite o nome do país" name="pais" id="pais"
                 pattern="[a-zA-Záãâéêíîóôõú\s]+$" maxlength="30"></div>
-            <div data-layer="67c17e44-c3e1-4947-94f3-a2a3791798d1">
-                <li>
-                    <input class="retangulo3" type="submit" id="enviar" value="Gravar">
-                </li>
-            </div>
+            <div data-layer="67c17e44-c3e1-4947-94f3-a2a3791798d1" class="retangulo3"></div>
             <div data-layer="0eb6f95b-8e65-453a-9a77-289b7db39653" class="cadastrarSe">Cadastrar-se</div>
         </div>
-    </form>
+
 
     
     </body>
