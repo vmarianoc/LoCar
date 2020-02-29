@@ -47,10 +47,10 @@ if ( ( ! isset( $email ) || ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) && !
 if ( $erro ) {
 	echo $erro;
 } else {
-    $dados = array();
-    foreach ( $_POST as $nome => $valor ) {
-        $dados[$nome] = strip_tags($valor);
-    }
+   // $dados = array();
+   // foreach ( $_POST as $nome => $valor ) {
+     //   $dados[$nome] = strip_tags($valor);
+    //}
         $conn = new mysqli('localhost', 'root', '1234');
         if ($conn->connect_error) {
             die('Falha ao estabelecer uma conexão: '.$conn->connect_error);
@@ -91,9 +91,26 @@ if ( $erro ) {
                     PRIMARY KEY (cpf));');
             }
  
-            $campos  = implode(", ", array_keys($dados));
-            $valores = implode("','", $dados);
-            $valores = "'".$valores."'";            
+            $cpfBD = $_POST['cpf'];
+            $nomeBD = $_POST['nome'];
+            $emailBD = $_POST['email'];
+            $telefoneBD = $_POST['telefone'];
+            $cnhBD = $_POST['cnh'];
+            $categoriaBD = $_POST['categoria'];
+            $validadeBD = $_POST['validade'];
+            $cepBD = $_POST['cep'];
+            $numeroBD = $_POST['numero'];
+            $complementoBD = $_POST['complemento'];
+            $ruaBD = $_POST['rua'];
+            $bairroBD = $_POST['bairro'];
+            $cidadeBD = $_POST['cidade'];
+            $estadoBD = $_POST['estado'];
+            $paisBD = $_POST['pais'];
+            $conn->query('INSERT INTO usuario VALUES ($cpfBD, $nomeBD, $emailBD, $telefoneBD, $cnhBD, $categoriaBD, $validadeBD,
+            $cepBD, $numeroBD, $complementoBD, $ruaBD, $bairroBD, $cidadeBD, $estadoBD, $paisBD);');
+            //$campos  = implode(", ", array_keys($dados));
+            //$valores = implode("','", $dados);
+            //$valores = "'".$valores."'";            
  
             $conn->query('INSERT INTO usuario('.$campos.') VALUES('.$valores.')');
             /* SE TUDO ESTIVER OK, REDIRECIONO PARA UMA PÁGINA DE SUCESSO */
