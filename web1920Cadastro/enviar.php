@@ -93,9 +93,8 @@ if ( $erro ) {
                     bairro varchar(50) NOT NULL,
                     cidade varchar(30) NOT NULL,
                     estado varchar(30) NOT NULL,
-                    pais varchar(30) NOT NULL
-                  
-                    id INT(11) AUTO_INCREMENT NOT NULL, nome VARCHAR(255) NOT NULL, email VARCHAR(255) NOT NULL, sexo ENUM(\'m\',\'f\'), endereco VARCHAR(255) NOT NULL, numero VARCHAR(10) NOT NULL, cidade VARCHAR(255) NOT NULL, estado VARCHAR(2), PRIMARY KEY (id));');
+                    pais varchar(30) NOT NULL,
+                    PRIMARY KEY (cpf));');
             }
  
             $campos  = implode(", ", array_keys($dados));
