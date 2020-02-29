@@ -6,7 +6,7 @@
         <title>Cadastro do Locatário</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link rel="stylesheet" href="web1920Cadastro.css">
+        <link rel="stylesheet" href="css/web1920Cadastro.css">
         <script type="text/javascript" src="includes/jquery-1.2.6.pack.js"></script>
         <script type="text/javascript" src="includes/jquery.maskedinput-1.1.4.pack.js"></script>
     </head>
