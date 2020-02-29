@@ -3,7 +3,7 @@
 
     <head>
         <meta charset="utf-8">
-        <title>Web 1920 – Cadastro</title>
+        <title>Cadastro do Locatário</title>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="web1920Cadastro.css">
@@ -18,7 +18,7 @@
                 $("#cpf").mask("999.999.999-99");
             });
             $(document).ready(function(){
-                $("#tel").mask("(99)99999-9999");
+                $("#telefone").mask("(99)99999-9999");
             });
             $(document).ready(function(){
                 $("#cep").mask("99999-999");
@@ -40,7 +40,7 @@
             <div data-layer="0f7c113d-156d-438c-ade1-9b4f76ab0c68" class="cadastroDoLocatario">Cadastro do Locatário</div>
             <div data-layer="d1f460b1-a9ca-4286-9a8d-71418be2cce4">
                 <input class="digiteUmEnderecoDeEMailValido" type="email" required="required" class="input-text" 
-                placeholder="Digite um endereço de e-mail válido" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                placeholder="Digite um endereço de e-mail válido" name="nome" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                 maxlength="50" id="email"></div>
             <div data-layer="45cfb261-b8da-41f8-8e9e-782e451678f3" class="eMail">E-mail</div>
             <div data-layer="47599780-b99f-4383-bce7-726889d20d58">
@@ -70,7 +70,7 @@
                 minlength="8" required></div>
             <div data-layer="e7fdbf01-a60f-4b48-9d2c-0c26a8a1362c" class="cep">CEP</div>
             <div data-layer="b175c7de-29df-44a5-a2ec-038c8cb3f744">
-                <input class="digiteONomeDaRua" type="text" required="required" placeholder="Digite o nome da rua" name="rua" 
+                <input class="digiteONomeDaRua" type="text" required="required" placeholder="Digite o nome da rua" name="nome" 
                 pattern="[a-zA-Záãâéêíîóôõú\s]+$" maxlength="50" id="rua"></div>
             <div data-layer="5179ec2b-d285-4da4-82da-78924a483530" class="rua">Rua</div>
             <div data-layer="afb21f02-386c-41ff-bb32-670ae86e154d">
@@ -78,30 +78,26 @@
                 pattern="[0-9]+$" id="numero"></div>
             <div data-layer="d9d0bc16-bd29-49da-8841-06cfea3a40a6" class="numero">Número</div>
             <div data-layer="fc5d65e1-fd0c-4dcd-a50b-b2033e5fd3d2" >
-                <input class="digiteONomeDoBairro" type="text" required="required" placeholder="Digite o nome do bairro" name="bairro" 
+                <input class="digiteONomeDoBairro" type="text" required="required" placeholder="Digite o nome do bairro" name="nome" 
                 pattern="[a-zA-Záãâéêíîóôõú\s]+$" maxlength="50" id="bairro"></div>
             <div data-layer="f1def891-fcdf-4062-80fd-b40e30ad7a0e" class="bairro">Bairro</div>
             <div data-layer="6251f79e-9646-44ef-b226-630b5ede6196">
-                <input class="opcional" type="text" placeholder="Opcional" name="complemento" pattern="[a-zA-Záãâéêíîóôõú\s]+$" 
+                <input class="opcional" type="text" placeholder="Opcional" name="nome" pattern="[a-zA-Záãâéêíîóôõú\s]+$" 
                 maxlength="30" id="complemento"></div>
             <div data-layer="a51ba5af-f482-4dfb-9161-557182c4749a" class="complemento">Complemento</div>
             <div data-layer="8f4c15a9-723d-41aa-90e5-d11a265df971">
-                <input class="digiteONomeDaCidade" type="text" placeholder="Digite o nome da cidade" name="cidade" id="cidade"
+                <input class="digiteONomeDaCidade" type="text" placeholder="Digite o nome da cidade" name="nome" id="cidade"
                 pattern="[a-zA-Záãâéêíîóôõú\s]+$" maxlength="30"></div>
             <div data-layer="bd2ff272-7d7c-497c-8043-496f2c47dfa5" class="cidade">Cidade</div>
             <div data-layer="5a9828e2-ab30-422d-9610-db4bdf6c52ec">
-                <input class="digiteONomeDoEstado" type="text" placeholder="Digite o nome do estado" name="estado" id="estado"
+                <input class="digiteONomeDoEstado" type="text" placeholder="Digite o nome do estado" name="nome" id="estado"
                 pattern="[a-zA-Záãâéêíîóôõú\s]+$" maxlength="30"></div>
             <div data-layer="fb5cd7fd-5ff6-4676-a5e5-3134cc9eaccf" class="estado">Estado</div>
             <div data-layer="53b37357-cef2-4105-9513-5bd7e8fa20bf" class="pais">País</div>
             <div data-layer="62898099-3600-4d83-8d2e-234c34b5eced">
-                <input class="digiteONomeDoPais" type="text" placeholder="Digite o nome do país" name="pais" id="pais"
+                <input class="digiteONomeDoPais" type="text" placeholder="Digite o nome do país" name="nome" id="pais"
                 pattern="[a-zA-Záãâéêíîóôõú\s]+$" maxlength="30"></div>
-            <div data-layer="67c17e44-c3e1-4947-94f3-a2a3791798d1">
-                <li>
-                    <input class="retangulo3" type="submit" id="enviar" value="Gravar">
-                </li>
-            </div>
+            <div data-layer="67c17e44-c3e1-4947-94f3-a2a3791798d1" class="retangulo3" ></div>
             <div data-layer="0eb6f95b-8e65-453a-9a77-289b7db39653" class="cadastrarSe">Cadastrar-se</div>
         </div>
     </form>

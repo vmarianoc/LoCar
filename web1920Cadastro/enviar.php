@@ -7,10 +7,10 @@
     }
 
     // Cria as variáveis dinamicamente
-foreach ( $_POST as $chave => $valor ) {
+foreach ( $_POST as $nome => $valor ) {
 	// Remove todas as tags HTML
 	// Remove os espaços em branco do valor
-	$$chave = trim( strip_tags( $valor ) );
+	$$nome = trim( strip_tags( $valor ) );
 	
 	// Verifica se tem algum valor nulo
 	if ( empty ( $valor ) ) {
@@ -47,16 +47,10 @@ if ( ( ! isset( $email ) || ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) && !
 if ( $erro ) {
 	echo $erro;
 } else {
-	// Se a variável $erro continuar com valor falso
-	// Você pode fazer o que preferir aqui, por exemplo, 
-	// enviar para a base de dados, ou enviar um email
-	// Tanto faz. Vou apenas exibir os dados na tela.
-	echo "<h1> Veja os dados enviados</h1>";
-	
-	foreach ( $_POST as $chave => $valor ) {
-		echo '<b>' . $chave . '</b>: ' . $valor . '<br><br>';
+    $dados = array();
+    foreach ( $_POST as $nome => $valor ) {
+        $dados[$nome] = strip_tags($valor);
     }
-
         $conn = new mysqli('localhost', 'root', '1234');
         if ($conn->connect_error) {
             die('Falha ao estabelecer uma conexão: '.$conn->connect_error);
@@ -101,7 +95,7 @@ if ( $erro ) {
             $valores = implode("','", $dados);
             $valores = "'".$valores."'";            
  
-            $conn->query('INSERT INTO clientes('.$campos.') VALUES('.$valores.')');
+            $conn->query('INSERT INTO usuario('.$campos.') VALUES('.$valores.')');
             /* SE TUDO ESTIVER OK, REDIRECIONO PARA UMA PÁGINA DE SUCESSO */
             header('location: sucesso.php');
  
