@@ -24,7 +24,22 @@
                 pattern="[a-zA-Záãâéêíîóôõú\s]+$" maxlength="30"></div>
         <div data-layer="90463dc7-0c9a-42b0-9c3f-277d76ed2363">
             <input class="dataRet" type="date" required="required" maxlength="10" placeholder="dd/mm/aaaa" name="dataRet" 
-            pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2020-02-29" max="2050-02-18" id="dataRet" style="border-color: transparent;">
+            pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="
+            <script type="text/javascript">var today = new Date();
+                var dd = today.getDate();
+                var mm = today.getMonth()+1; //January is 0!
+                var yyyy = today.getFullYear();
+                 if(dd<10){
+                        dd='0'+dd
+                    } 
+                    if(mm<10){
+                        mm='0'+mm
+                    } 
+                
+                today = yyyy+'-'+mm+'-'+dd;
+                document.getElementById("datefield").setAttribute("min", today);
+            </script>
+                " id="dataRet" style="border-color: transparent;">
         </div>
         <div data-layer="52a73616-e475-42d0-b2dc-56a12db43756">
             <!-- Modal HTML embedded directly into document -->
@@ -39,10 +54,11 @@
                         Fonte: <a href="https://www.unidas.com.br/">Unidas Locadora</a>.
                     </p>
                 </div>
-            </div>
-            <div class="modal-footer">
+                <div class="modal-footer">
                 <a href="#" rel="modal:close">Close</a>
               </div>
+            </div>
+            
             <!-- Link to open the modal -->
             <p><a class="contratoDeLocacao" href="#ex1" rel="modal:open">CONTRATO DE LOCAÇÃO</a></p>
         </div>
@@ -161,10 +177,10 @@
                         <br>Fonte: <a href="https://www.unidas.com.br/para-voce/como-alugar">Unidas Locadora</a>.
                     </p>
                 </div>
-            </div>
+            
             <div class="modal-footer">
                 <a href="#" rel="modal:close">Close</a>
-            </div>
+            </div></div>
             <!-- Link to open the modal -->
             <p><a class="politicaDePrivacidade" href="#ex4" rel="modal:open">REQUISITOS E CONDIÇÕES</a></p>
         </div>
