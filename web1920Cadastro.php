@@ -35,7 +35,7 @@
             <div data-layer="5ccac4d4-8227-4ad8-a0f8-ee42d766c258" class="informeSeusDadosPessoais">Informe seus dados pessoais</div>
             <div data-layer="19c9894a-180e-4085-aac6-b9ab05bf4ffa">
                 <input class="cpfPass" type="text" placeholder="000.000.000-00" name="cpf" pattern="[0-9]+$" maxlength="11" 
-                minlength="11" id="cpf" required></div>
+                minlength="11" id="cpf" ></div>
             <div data-layer="b5044ed5-f47e-449e-9e13-a46599a8e143" class="cpfPassaporte">CPF/ Passaporte</div>
             <div data-layer="f35fa999-1199-4b07-b610-21122c788def" class="nome">Nome</div>
             <div data-layer="0f7c113d-156d-438c-ade1-9b4f76ab0c68" class="cadastroDoLocatario">Cadastro do Locatário</div>
