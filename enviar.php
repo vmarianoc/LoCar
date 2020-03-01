@@ -16,7 +16,6 @@
     if(!$conect=mysqli_connect('localhost','root','','usuario')) die ('erro ao conectar');
     if(!validaCPF($_POST['cpf'])){
         $erro = 'Informe um CPF/ Passaporte válido.';
-        exit();
     } else {
 
         $cpfBD = $_POST['cpf'];
