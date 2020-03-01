@@ -24,10 +24,8 @@
                 pattern="[a-zA-Záãâéêíîóôõú\s]+$" maxlength="30"></div>
         <div data-layer="90463dc7-0c9a-42b0-9c3f-277d76ed2363">
             <input class="dataRet" type="date" required="required" maxlength="10" placeholder="dd/mm/aaaa" name="dataRet" 
-            pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="" id="datePickerId" style="border-color: transparent;">
-            <script type="text/javascript">
-                datePickerId.max = new Date().toISOString().split("T")[0];
-            </script>
+            pattern="[0-9]{2}\/[0-9]{2}\/[0-9]{4}$" min="2020-03-01" id="dataRet" style="border-color: transparent;">
+            
         </div>
         <div data-layer="52a73616-e475-42d0-b2dc-56a12db43756">
             <!-- Modal HTML embedded directly into document -->
