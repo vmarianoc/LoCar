@@ -9,11 +9,18 @@
         <link rel="stylesheet" href="web1920Cadastro.css">
         <script type="text/javascript" src="includes/jquery-1.2.6.pack.js"></script>
         <script type="text/javascript" src="includes/jquery.maskedinput-1.1.4.pack.js"></script>
+        <script type="text/javascript">
+        function zoom() {
+            document.body.style.zoom = "80%" 
+        }
+        </script>
     </head>
 
-    <body>
+    <body onload="zoom()">
 
+    
         <script type="text/javascript">
+        
             $(document).ready(function(){
                 $("#cpf").mask("999.999.999-99");
             });
@@ -24,6 +31,10 @@
                 $("#cep").mask("99999-999");
             });
         </script>
+
+    <p id="show_message" style="display: none">Enviado com Sucesso! </p>
+ 
+    <span id="error" style="display: none"></span>
     <form action="javascript:void(0)" method="post" id="ajax-form">
          
         <div data-layer="c29ea42a-d886-4086-a597-e008cc1158b0" class="web1920Cadastro justify-content-center">
@@ -35,7 +46,7 @@
             <div data-layer="5ccac4d4-8227-4ad8-a0f8-ee42d766c258" class="informeSeusDadosPessoais">Informe seus dados pessoais</div>
             <div data-layer="19c9894a-180e-4085-aac6-b9ab05bf4ffa">
                 <input class="cpfPass" type="text" placeholder="000.000.000-00" name="cpf" maxlength="11" 
-                minlength="11" id="cpf" ></div>
+                minlength="11" id="cpf" require></div>
             <div data-layer="b5044ed5-f47e-449e-9e13-a46599a8e143" class="cpfPassaporte">CPF/ Passaporte</div>
             <div data-layer="f35fa999-1199-4b07-b610-21122c788def" class="nome">Nome</div>
             <div data-layer="0f7c113d-156d-438c-ade1-9b4f76ab0c68" class="cadastroDoLocatario">Cadastro do Locatário</div>
@@ -46,7 +57,7 @@
             <div data-layer="45cfb261-b8da-41f8-8e9e-782e451678f3" class="eMail">E-mail</div>
             <div data-layer="47599780-b99f-4383-bce7-726889d20d58">
                 <input class="telCel" type="tel" maxlength="14" minlength="14" placeholder="(XX)XXXXX-XXXX" 
-                name="telefone"  id="telefone" ></div>
+                name="telefone"  id="telefone" require></div>
             <div data-layer="6dca1c1f-8417-4b55-a57b-24cde8a222a0" class="telefoneOuCelular">Telefone ou Celular</div>
             <div data-layer="a96e9847-d710-4f28-a3ac-3b86bfa19336" class="categoriaHabilitada">Categoria Habilitada</div>
             <div data-layer="2575537d-6de3-4bea-b91e-b7632559ed9f" class="informeSeusDadosDaCarteiraNacionalDeHabilitacao">Informe seus dados da Carteira Nacional de Habilitação</div>
@@ -120,6 +131,8 @@
  
  
         $("#error").hide();
+
+        
  
         // ajax
         $.ajax({

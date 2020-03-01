@@ -12,9 +12,14 @@
 <!-- jQuery Modal -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<script type="text/javascript">
+        function zoom() {
+            document.body.style.zoom = "80%" 
+        }
+        </script>
     </head>
 
-    <body>
+    <body onload="zoom()">
         <div data-layer="7abd0011-b6cc-45f3-8889-406ce5c0dfda" class="web1920Login  justify-content-center">
         <img src="assets/web1920Login.png" class=" img-fluid">       
         <div data-layer="463beea2-2509-4c4b-8dd2-3e45537681f7" class="retangulo33"></div>
