@@ -34,7 +34,7 @@
             </div>
             <div data-layer="5ccac4d4-8227-4ad8-a0f8-ee42d766c258" class="informeSeusDadosPessoais">Informe seus dados pessoais</div>
             <div data-layer="19c9894a-180e-4085-aac6-b9ab05bf4ffa">
-                <input class="cpfPass" type="text" placeholder="000.000.000-00" name="cpf" pattern="[0-9]+$" maxlength="11" 
+                <input class="cpfPass" type="text" placeholder="000.000.000-00" name="cpf" maxlength="11" 
                 minlength="11" id="cpf" ></div>
             <div data-layer="b5044ed5-f47e-449e-9e13-a46599a8e143" class="cpfPassaporte">CPF/ Passaporte</div>
             <div data-layer="f35fa999-1199-4b07-b610-21122c788def" class="nome">Nome</div>
@@ -46,7 +46,7 @@
             <div data-layer="45cfb261-b8da-41f8-8e9e-782e451678f3" class="eMail">E-mail</div>
             <div data-layer="47599780-b99f-4383-bce7-726889d20d58">
                 <input class="telCel" type="tel" maxlength="14" minlength="14" placeholder="(XX)XXXXX-XXXX" 
-                name="telefone"  id="telefone" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$"></div>
+                name="telefone"  id="telefone" ></div>
             <div data-layer="6dca1c1f-8417-4b55-a57b-24cde8a222a0" class="telefoneOuCelular">Telefone ou Celular</div>
             <div data-layer="a96e9847-d710-4f28-a3ac-3b86bfa19336" class="categoriaHabilitada">Categoria Habilitada</div>
             <div data-layer="2575537d-6de3-4bea-b91e-b7632559ed9f" class="informeSeusDadosDaCarteiraNacionalDeHabilitacao">Informe seus dados da Carteira Nacional de Habilitação</div>
