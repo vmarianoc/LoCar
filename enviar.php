@@ -1,4 +1,11 @@
 <?php
+
+include connect.php;
+
+?>
+
+<?php
+
     $erro = false;
 
     // Verifica se o POST tem algum valor
