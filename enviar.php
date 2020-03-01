@@ -13,7 +13,6 @@
     if ( !isset( $_POST ) || empty( $_POST ) ) {
         $erro = 'Nada foi postado.';
     }
-    if(!$conect=mysqli_connect('localhost','root','','usuario')) die ('erro ao conectar');
     if(!validaCPF($_POST['cpf'])){
         $erro = 'Informe um CPF/ Passaporte válido.';
     } else {
