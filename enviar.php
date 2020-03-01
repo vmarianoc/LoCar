@@ -17,35 +17,35 @@ foreach ( $_POST as $nome => $valor ) {
 	// Remove os espaços em branco do valor
 	$$nome = trim( strip_tags( $valor ) );
 	
-	// Verifica se tem algum valor nulo
-	if ( empty ( $valor ) ) {
-		$erro = 'Existem campos em branco.';
-	}
-}
+// 	// Verifica se tem algum valor nulo
+// 	if ( empty ( $valor ) ) {
+// 		$erro = 'Existem campos em branco.';
+// 	}
+// }
 
-    // Verifica se $idade realmente existe e se é um número. 
-// Também verifica se não existe nenhum erro anterior
-if ( ( ! isset( $cpf) || ! is_numeric( $cpf ) ) && !$erro ) {
-	$erro = 'O CPF/ Passaporte deve ser um valor numérico.';
-}
-if ( ( ! isset( $telefone) || ! is_numeric( $telefone ) ) && !$erro ) {
-	$erro = 'O Telefone ou Celular deve ser um valor numérico.';
-}
-if ( ( ! isset( $cnh) || ! is_numeric( $cnh ) ) && !$erro ) {
-	$erro = 'O Número de Registro da CNH deve ser um valor numérico.';
-}
-if ( ( ! isset( $cep) || ! is_numeric( $cep ) ) && !$erro ) {
-	$erro = 'O CEP deve ser um valor numérico.';
-}
-if ( ( ! isset( $numero) || ! is_numeric( $numero ) ) && !$erro ) {
-	$erro = 'O Número deve ser um valor numérico.';
-}
+//     // Verifica se $idade realmente existe e se é um número. 
+// // Também verifica se não existe nenhum erro anterior
+// if ( ( ! isset( $cpf) || ! is_numeric( $cpf ) ) && !$erro ) {
+// 	$erro = 'O CPF/ Passaporte deve ser um valor numérico.';
+// }
+// if ( ( ! isset( $telefone) || ! is_numeric( $telefone ) ) && !$erro ) {
+// 	$erro = 'O Telefone ou Celular deve ser um valor numérico.';
+// }
+// if ( ( ! isset( $cnh) || ! is_numeric( $cnh ) ) && !$erro ) {
+// 	$erro = 'O Número de Registro da CNH deve ser um valor numérico.';
+// }
+// if ( ( ! isset( $cep) || ! is_numeric( $cep ) ) && !$erro ) {
+// 	$erro = 'O CEP deve ser um valor numérico.';
+// }
+// if ( ( ! isset( $numero) || ! is_numeric( $numero ) ) && !$erro ) {
+// 	$erro = 'O Número deve ser um valor numérico.';
+// }
 
-// Verifica se $email realmente existe e se é um email. 
-// Também verifica se não existe nenhum erro anterior
-if ( ( ! isset( $email ) || ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) && !$erro ) {
-	$erro = 'Envie um email válido.';
-}
+// // Verifica se $email realmente existe e se é um email. 
+// // Também verifica se não existe nenhum erro anterior
+// if ( ( ! isset( $email ) || ! filter_var( $email, FILTER_VALIDATE_EMAIL ) ) && !$erro ) {
+// 	$erro = 'Envie um email válido.';
+// }
 
 
 // Se existir algum erro, mostra o erro
@@ -56,7 +56,7 @@ if ( $erro ) {
    // foreach ( $_POST as $nome => $valor ) {
      //   $dados[$nome] = strip_tags($valor);
     //}
-        $conn = new mysqli('localhost', 'root', '1234');
+        // $conn = new mysqli('localhost', 'root', '1234');
         if ($conn->connect_error) {
             die('Falha ao estabelecer uma conexão: '.$conn->connect_error);
         } else {
@@ -64,9 +64,9 @@ if ( $erro ) {
             VERIFICO SE EXISTE UM BANCO DE DADOS.
             CASO NÃO TENHA O BANCO DE DADOS, EU O CRIO.
             */
-            if(!$conn->select_db('locar')) {
+            if(!$conn->select_db('Locar')) {
                 $conn->query('CREATE DATABASE IF NOT EXISTS locar;');
-                $conn->select_db('locar');
+                $conn->select_db('Locar');
             }
  
             /*
