@@ -99,9 +99,11 @@
                 <input class="digiteONomeDoPais" type="text" placeholder="Digite o nome do país" name="pais" id="pais"
                  maxlength="30"></div>
             <div data-layer="67c17e44-c3e1-4947-94f3-a2a3791798d1" class="retangulo3" ></div>
-            <div data-layer="67c17e44-c3e1-4947-94f3-a2a3791798d1" class="retangulo3"></div>
+            <div data-layer="67c17e44-c3e1-4947-94f3-a2a3791798d1">
+                <button class="btn btn-primary cadastrarSe" id = "submit" type = "submit"></button> Cadastrar-se
+            </div>
             <div data-layer="0eb6f95b-8e65-453a-9a77-289b7db39653">
-                <button class="cadastrarSe" id = "submit" type = "submit"></button> Cadastrar-se
+                
                 
             </div>
         </div>
