@@ -100,8 +100,8 @@
                  maxlength="30"></div>
             <div data-layer="67c17e44-c3e1-4947-94f3-a2a3791798d1" class="retangulo3" ></div>
             <div data-layer="67c17e44-c3e1-4947-94f3-a2a3791798d1" class="retangulo3">
-            <button id = "submit" type = "submit" class = "btn btn-outline-light" style = "border-bottom-right-radius: 20px; 
-                border-bottom-left-radius: 20px;border-top-right-radius: 20px;border-top-left-radius: 20px;padding: 10px 58px ">Cadastrar</div>
+            <button id = "submit" type = "submit" class = "btn btn-primary" style = "border-bottom-right-radius: 20px; 
+                border-bottom-left-radius: 20px;border-top-right-radius: 20px;border-top-left-radius: 20px;padding: 10px 58px ">Cadastrar-se</div>
                 
             </div>
         </div>
