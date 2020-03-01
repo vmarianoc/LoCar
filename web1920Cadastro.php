@@ -74,7 +74,7 @@
                     <option value="D">D</option>
                 </select></div>
             <div data-layer="27322758-cfe3-4656-861a-33be9a7b55a7">
-                <input class="validadeCNH" type="date" required="required" maxlength="10" placeholder="dd/mm/aaaa" name="validade" 
+                <input class="validadeCNH" type="date" required="required" maxlength="10" placeholder="dd/mm/aaaa" name="validade" id="validade"
                  min="2012-01-01" max="2050-02-18" id="validade"></div>
             <div data-layer="bf12c08a-53e7-4882-91bf-6f2220b7c988" class="informeSeuEndereco">Informe seu endereço</div>
             <div data-layer="38f644ef-7e4d-4b8e-84a8-60ee1dd9b19b">
@@ -131,6 +131,76 @@
  
  
         $("#error").hide();
+
+        //name required
+        var nome = $("input#nome").val();
+        if(nome == ""){
+            $("#error").fadeIn().text("Nome requerido.");
+            $("input#nome").focus();
+            return false;
+        }
+ 
+        // email required
+        var email = $("input#email").val();
+        if(email == ""){
+            $("#error").fadeIn().text("Email requerido");
+            $("input#email").focus();
+            return false;
+        }
+ 
+        var cpf = $("input#cpf").val();
+        if(cpf == ""){
+            $("#error").fadeIn().text("cpf requirido");
+            $("input#cpf").focus();
+            return false;
+        }
+
+        //name required
+        var tel = $("input#tel").val();
+        if(tel == ""){
+            $("#error").fadeIn().text("Telefone requerido.");
+            $("input#tel").focus();
+            return false;
+        }
+ 
+        // email required
+        var cnh = $("input#cnh").val();
+        if(cnh == ""){
+            $("#error").fadeIn().text("cnh requerido");
+            $("input#cnh").focus();
+            return false;
+        }
+ 
+        var validade = $("input#validade").val();
+        if(validade == ""){
+            $("#error").fadeIn().text("validade requirida");
+            $("input#validade").focus();
+            return false;
+        }
+        //name required
+        var bairro = $("input#bairro").val();
+        if(bairro == ""){
+            $("#error").fadeIn().text("bairro requerido.");
+            $("input#bairro").focus();
+            return false;
+        }
+ 
+        // email required
+        var complemento = $("input#complemento").val();
+        if(cnh == ""){
+            $("#error").fadeIn().text("complemento requerido");
+            $("input#complemento").focus();
+            return false;
+        }
+ 
+        var cep = $("input#cep").val();
+        if(validade == ""){
+            $("#error").fadeIn().text("cep requirido");
+            $("input#cep").focus();
+            return false;
+        }
+
+
 
         
  
