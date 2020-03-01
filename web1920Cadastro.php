@@ -9,11 +9,18 @@
         <link rel="stylesheet" href="web1920Cadastro.css">
         <script type="text/javascript" src="includes/jquery-1.2.6.pack.js"></script>
         <script type="text/javascript" src="includes/jquery.maskedinput-1.1.4.pack.js"></script>
+        <script type="text/javascript">
+        function zoom() {
+            document.body.style.zoom = "80%" 
+        }
+        </script>
     </head>
 
-    <body>
+    <body onload="zoom()">
 
+    
         <script type="text/javascript">
+        
             $(document).ready(function(){
                 $("#cpf").mask("999.999.999-99");
             });
