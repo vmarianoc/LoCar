@@ -45,8 +45,8 @@
                 maxlength="50" id="email"></div>
             <div data-layer="45cfb261-b8da-41f8-8e9e-782e451678f3" class="eMail">E-mail</div>
             <div data-layer="47599780-b99f-4383-bce7-726889d20d58">
-                <input class="telCel" type="tel" required="required" maxlength="14" minlength="14" placeholder="(XX)XXXXX-XXXX" 
-                name="telefone"  id="telefone" pattern="\([0-9]{2}\) [0-9]{4,6}-[0-9]{3,4}$"></div>
+                <input class="telCel" type="tel" maxlength="14" minlength="14" placeholder="(XX)XXXXX-XXXX" 
+                name="telefone"  id="telefone" pattern="\([0-9]{2}\)[0-9]{4,6}-[0-9]{3,4}$"></div>
             <div data-layer="6dca1c1f-8417-4b55-a57b-24cde8a222a0" class="telefoneOuCelular">Telefone ou Celular</div>
             <div data-layer="a96e9847-d710-4f28-a3ac-3b86bfa19336" class="categoriaHabilitada">Categoria Habilitada</div>
             <div data-layer="2575537d-6de3-4bea-b91e-b7632559ed9f" class="informeSeusDadosDaCarteiraNacionalDeHabilitacao">Informe seus dados da Carteira Nacional de Habilitação</div>
