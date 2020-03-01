@@ -24,8 +24,8 @@
                 $("#cep").mask("99999-999");
             });
         </script>
-        <form action="enviar.php" method="post">
-        
+    <form action="javascript:void(0)" method="post" id="ajax-form">
+         
         <div data-layer="c29ea42a-d886-4086-a597-e008cc1158b0" class="web1920Cadastro justify-content-center">
             <img src="assets/web1920Cadastro.png" class=" img-fluid">
             <div data-layer="2d856e97-239d-461b-b200-d47678f5e26d">
@@ -106,7 +106,36 @@
             </div>
         </div>
     </form>
-
+<script type="text/javascript">
+ $(document).ready(function($){
+ 
+    // hide messages 
+    $("#error").hide();
+    $("#show_message").hide();
+ 
+    // on submit...
+    $('#ajax-form').submit(function(e){
+ 
+        e.preventDefault();
+ 
+ 
+        $("#error").hide();
+ 
+        // ajax
+        $.ajax({
+            type:"POST",
+            url: "enviar.php",
+            data: $(this).serialize(), // get all form field value in serialize form
+            success: function(){
+              $("#show_message").fadeIn();
+              //$("#ajax-form").fadeOut();
+            }
+        });
+    });  
+ 
+    return false;
+    });
+</script>
     
     </body>
     </html>
