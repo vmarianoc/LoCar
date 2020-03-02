@@ -7,6 +7,6 @@
 </head>
 <body>
     <h1>O cadastro foi realizado com sucesso!</h1>
-    <meta http-equiv="refresh" content="10; URL='index.html'"/>
+    <meta http-equiv="refresh" content="10; URL='index.php'"/>
 </body>
 </html>
