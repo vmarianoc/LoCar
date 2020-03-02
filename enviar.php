@@ -13,11 +13,11 @@
     if ( !isset( $_POST ) || empty( $_POST ) ) {
         $erro = 'Nada foi postado.';
     }
-    $cpf = mysqli_real_escape_string($_POST['cpf']);
-    $sql = $conn->query("SELECT * FROM usuario WHERE cpf='$cpf'");
-    if(mysqli_num_rows($sql) > 0){
-        echo "Este CPF/ Passaporte já está cadastrado";
-        exit();
+<<<<<<< HEAD
+=======
+    if(!validaCPF($_POST['cpf'])){
+        $erro = 'Informe um CPF/ Passaporte válido.';
+>>>>>>> 395285a8e2e3035d01c47eab0b4086f1e23a32a3
     } else {
 
         $cpfBD = $_POST['cpf'];
@@ -44,5 +44,32 @@
     }
 
  
-
+    function validaCPF($cpf) {
+ 
+        // Extrai somente os números
+        $cpf = preg_replace( '/[^0-9]/is', '', $cpf );
+         
+        // Verifica se foi informado todos os digitos corretamente
+        if (strlen($cpf) != 11) {
+            return false;
+        }
+    
+        // Verifica se foi informada uma sequência de digitos repetidos. Ex: 111.111.111-11
+        if (preg_match('/(\d)\1{10}/', $cpf)) {
+            return false;
+        }
+    
+        // Faz o calculo para validar o CPF
+        for ($t = 9; $t < 11; $t++) {
+            for ($d = 0, $c = 0; $c < $t; $c++) {
+                $d += $cpf{$c} * (($t + 1) - $c);
+            }
+            $d = ((10 * $d) % 11) % 10;
+            if ($cpf{$c} != $d) {
+                return false;
+            }
+        }
+        return true;
+    
+    }
 ?>
