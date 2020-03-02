@@ -13,9 +13,8 @@
     if ( !isset( $_POST ) || empty( $_POST ) ) {
         $erro = 'Nada foi postado.';
     }
-    if(!$conect=mysqli_connect('localhost','root','','usuario')) die ('erro ao conectar');
-        $cpf = mysqli_real_escape_string($_POST['cpf']);
-        $sql = $conect->query("SELECT * FROM usuario WHERE cpf='$cpf'");
+    $cpf = mysqli_real_escape_string($_POST['cpf']);
+    $sql = $conn->query("SELECT * FROM usuario WHERE cpf='$cpf'");
     if(mysqli_num_rows($sql) > 0){
         echo "Este CPF/ Passaporte já está cadastrado";
         exit();
