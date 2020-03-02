@@ -13,11 +13,8 @@
     if ( !isset( $_POST ) || empty( $_POST ) ) {
         $erro = 'Nada foi postado.';
     }
-<<<<<<< HEAD
-=======
     if(!validaCPF($_POST['cpf'])){
         $erro = 'Informe um CPF/ Passaporte válido.';
->>>>>>> 395285a8e2e3035d01c47eab0b4086f1e23a32a3
     } else {
 
         $cpfBD = $_POST['cpf'];
