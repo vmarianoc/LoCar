@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>O cadastro foi realizado com sucesso!</h1>
+    <h1>O cadastro foi realizado com sucesso, iremos Verificar seus dados e retornaremos o contato!</h1>
     <meta http-equiv="refresh" content="10; URL='index.php'"/>
 </body>
 </html>
