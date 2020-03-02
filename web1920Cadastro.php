@@ -32,9 +32,7 @@
             });
         </script>
 
-    <p id="show_message" style="display: none">Enviado com Sucesso! </p>
- 
-    <span id="error" style="display: none"></span>
+   
     <form action="javascript:void(0)" method="post" id="ajax-form" onsubmit="$('#show_message').fadeIn();">
          
         <div data-layer="c29ea42a-d886-4086-a597-e008cc1158b0" class="web1920Cadastro justify-content-center">
@@ -117,6 +115,9 @@
             </div>
         </div>
     </form>
+    </br>
+    <p id="show_message" style="display: none"><h1>Enviado com Sucesso!</h1> </p>
+    <span id="error" style="display: none"></span>
 <script type="text/javascript">
  $(document).ready(function($){
  
