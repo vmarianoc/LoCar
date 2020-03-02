@@ -33,7 +33,7 @@
         </script>
 
    
-    <form action="javascript:void(0)" method="post" id="ajax-form" onsubmit="$('#show_message').fadeIn();">
+    <form action="javascript:void(0)" method="post" id="ajax-form">
          
         <div data-layer="c29ea42a-d886-4086-a597-e008cc1158b0" class="web1920Cadastro justify-content-center">
             <img src="assets/web1920Cadastro.png" class=" img-fluid">
@@ -211,6 +211,7 @@
             url: "enviar.php",
             data: $(this).serialize(), // get all form field value in serialize form
             success: function(){
+                window.location.href = 'sucesso.php'
               $("#show_message").fadeIn();
               //$("#ajax-form").fadeOut();
             }
