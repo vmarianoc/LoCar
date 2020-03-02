@@ -35,7 +35,7 @@
     <p id="show_message" style="display: none">Enviado com Sucesso! </p>
  
     <span id="error" style="display: none"></span>
-    <form action="javascript:void(0)" method="post" id="ajax-form">
+    <form action="javascript:void(0)" method="post" id="ajax-form" onsubmit="$('#show_message').fadeIn();">
          
         <div data-layer="c29ea42a-d886-4086-a597-e008cc1158b0" class="web1920Cadastro justify-content-center">
             <img src="assets/web1920Cadastro.png" class=" img-fluid">
